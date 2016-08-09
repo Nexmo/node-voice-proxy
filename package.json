@@ -1,0 +1,27 @@
+{
+  "name": "voice-proxy",
+  "version": "0.1.0",
+  "description": "An example of a Voice Proxy application built using the Nexmo Voice API",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "nodemon ./lib/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nexmo",
+    "voice",
+    "api",
+    "proxy",
+    "masked",
+    "communication"
+  ],
+  "author": "Phil Leggetter <phil@leggetter.co.uk> (http://www.leggetter.co.uk)",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "nexmo": "^1.0.0-beta-7"
+  }
+}
