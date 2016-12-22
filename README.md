@@ -7,6 +7,8 @@
 
 ## Getting Started
 
+### Create a Nexmo App
+
 Create an application and take a note of the application UUID: 
 
 ```sh
@@ -21,11 +23,25 @@ If you don't know the URLs for your proxy-call and event webhooks yet you can up
 nexmo app:update APP_ID voice-proxy https://example.com/proxy-call https://example.com/event
 ```
 
+### Configuration
+
 Copy the `example.env` to `.env` and update the content as appropriate:
 
 ```
 cp example.env .env
 ```
+
+Configuration is as follows:
+
+| Environment Variable | Required? | Description |
+| -------------------- | --------- | ----------- |
+| NEXMO_API_KEY | Yes | Your Nexmo API key (Get from the [Nexmo Dashboard](https://dashboard.nexmo.com/settings)) |
+| NEXMO_API_SECRET | Yes | Your Nexmo API secret (Get from the [Nexmo Dashboard](https://dashboard.nexmo.com/settings)) |
+| NEXMO_APP_ID | Yes | The id generated when you created your Nexmo application. |
+| NEXMO_DEBUG | No | Determines if interactions with the Nexmo API should be logged to the console. A non-falsy value will result in debug being on |
+| PROVISIONED_NUMBERS | No | If supplied it should be in the format `[{"country":"GB","msisdn":"NUMBER_1"},{"country":"GB","msisdn":"NUMBER_2"}]` |
+
+### Run the App
 
 Start the application:
 
@@ -68,8 +84,7 @@ You should see a response such as the following:
       "msisdn":"USER_B_VIRTUAL_NUMBER",
       "country":"GB"
     }
-  },
-  "callLogs":[]
+  }
 }]
 ```
   
