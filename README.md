@@ -53,13 +53,13 @@ npm start
 
 To indicate that a conversation between two users should be allowed navigate to the following replacing `FROM_NUMBER` and `TO_NUMBER` with e.164 formatting international numbers (e.g. 14155550123):
 
-http://localhost:5000/conversation/start/FROM_NUMBER/TO_NUMBER
+http://localhost:3000/conversation/start/FROM_NUMBER/TO_NUMBER
 
 In a real system this conversation would be set up by an automated process.
 
 To check the existing ongoing conversations navigate to:
 
-http://localhost:5000/conversations
+http://localhost:3000/conversations
 
 You should see a response such as the following:
 
